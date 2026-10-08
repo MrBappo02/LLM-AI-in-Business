@@ -1,0 +1,20 @@
+# Originals stay on your laptop; the markdown conversion beside them is committed.
+# This keeps other people's copyrighted files out of a repository that may be public.
+raw/**/*.pdf
+raw/**/*.docx
+raw/**/*.pptx
+raw/**/*.xlsx
+raw/**/*.mp3
+raw/**/*.mp4
+raw/**/*.m4a
+raw/**/*.wav
+
+# Python
+.venv/
+__pycache__/
+
+# Obsidian's per-user state
+.obsidian/workspace*.json
+.obsidian/cache
+
+.DS_Store

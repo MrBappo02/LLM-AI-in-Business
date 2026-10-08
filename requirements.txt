@@ -1,0 +1,2 @@
+yt-dlp          # YouTube metadata and captions: tools/fetch_youtube.py
+markitdown[pdf] # web pages, PDF, Word and PowerPoint to markdown: tools/fetch_article.py

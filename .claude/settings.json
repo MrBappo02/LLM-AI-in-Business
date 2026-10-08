@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 tools/lint.py*)",
+      "Bash(python3 tools/fetch_youtube.py *)",
+      "Bash(python3 tools/fetch_article.py *)",
+      "Bash(.venv/bin/python tools/fetch_article.py *)",
+      "Bash(.venv/bin/python tools/lint.py*)",
+      "Bash(.venv/bin/python tools/fetch_youtube.py *)",
+      "Bash(markitdown *)",
+      "Bash(.venv/bin/markitdown *)"
+    ]
+  }
+}
