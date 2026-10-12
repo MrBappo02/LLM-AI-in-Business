@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Can I trust AI with my data, its answers and my people?</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../index.html">LLM Wiki — AI in Business</a>
+  <a class="btn" href="../index.html">Home</a>
+</header>
+<div class="layout">
+<nav class="side">
+<h2>Sources (8)</h2>
+<a href="../sources/2026-10-12-aibs-handbook-geopolitics.html">Who owns your AI – and what happens to you if that changes?<small>other · 2026-10-12</small></a>
+<a href="../sources/2026-10-11-ai-is-less-regulated-than-milk.html">AI is less regulated than milk, says Microsoft president<small>article · 2026-10-11</small></a>
+<a href="../sources/2026-10-05-aibs-handbook-themes-1-2.html">Theme 1 — What don&#x27;t we know yet about AI, and what should we find out first? / Theme 2 — What do firms like ours use AI for, and what pays off?<small>other · 2026-10-05</small></a>
+<a href="../sources/2026-09-24-aibs-handbook-trust-ai-safety.html" class="current">Can I trust AI with my data, its answers and my people?<small>other · 2026-09-24</small></a>
+<a href="../sources/2026-07-28-solidworks-ai-fd03.html">SOLIDWORKS AI Just Got Better - Here&#x27;s What&#x27;s New in FD03<small>video · 2026-07-28</small></a>
+<a href="../sources/2026-04-22-how-ai-is-reshaping-workflows-and-redefining-jobs.html">How AI is reshaping workflows and redefining jobs<small>article · 2026-04-22</small></a>
+<a href="../sources/2025-12-10-siemens-engineering-copilot-tia.html">Siemens Demonstrates Generative AI Copilot to Automate Engineering Tasks<small>article · 2025-12-10</small></a>
+<a href="../sources/2018-04-16-what-generative-design-really-is.html">What Generative Design really is, what it isn’t, and why it’s the future of manufacturing<small>article · 2018-04-16</small></a>
+</nav>
+<main>
+<h1>Can I trust AI with my data, its answers and my people?</h1>
+<table class="meta"><tr><th>Kind</th><td>other</td></tr><tr><th>Author</th><td>Team 5</td></tr><tr><th>Publisher</th><td>AIBS handbook (course handbook draft)</td></tr><tr><th>URL</th><td>none — local PDF, raw/reports/handbook-trust-ai-safety-v2.pdf</td></tr><tr><th>Published</th><td>2026-09-24</td></tr><tr><th>Ingested</th><td>2026-10-12</td></tr><tr><th>Added by</th><td>Nasjaat</td></tr><tr><th>Length</th><td>2 pages (read in full), including references</td></tr></table>
+<h2>TL;DR</h2>
+<ul><li>
+A handbook chapter by Team 5 (v0.2) for a fictional family-owned 30-person Dutch CNC shop. Its most valuable data is customer drawings (often under NDA), price calculations and staff records.
+</li><li>
+<strong>Data:</strong> free chatbots are the main risk. Business plans with a signed data processing agreement don't train on your data by default, and a local open model (LM Studio, Ollama) keeps everything in-house.
+</li><li>
+<strong>Answers:</strong> an autonomy ladder (advise → draft for approval → act within fixed limits) where every new use starts at the bottom. Avoid excessive agency.
+</li><li>
+<strong>People:</strong> hidden AI use is already common (78% of AI users bring their own tools), and bans alone fail. Offer one approved tool and a rule, and train staff (a legal duty since 2 Feb 2025).
+</li><li>
+Use case: AI fills a field list from RFQs, the costing sheet still sets the price, and the estimator approves every draft. It is tested on 50 past RFQs against a pass level set first.
+</li></ul>
+<h2>Key claims</h2>
+<p>Figures are relayed from the chapter's cited sources.</p>
+<p><strong>1. My data (The translation)</strong></p>
+<ul><li>
+Anything typed into a cloud AI tool goes to the provider's servers. The Dutch data protection authority (AP) warns that data entered in free versions may be stored and used for training, and it received more chatbot-related breach reports in 2025 than in 2024 (citing Accountant.nl, 2025).
+</li><li>
+Business plans come with a contract and by default don't train on your data (citing OpenAI, Microsoft, Anthropic, Mistral AI). Copilot keeps EU prompts in the EU. Always sign the data processing agreement.
+</li><li>
+LM Studio or Ollama can run an open model on one PC with 16 GB memory and a graphics card (citing SitePoint, 2026). Nothing leaves the building, but the models are weaker and need upkeep.
+</li></ul>
+<p><strong>2. Its answers (The translation)</strong></p>
+<ul><li>
+Every new use starts at the bottom of a ladder: advise (a person decides) → draft for approval (a named person checks and sends) → act within fixed limits (only low-risk, reversible tasks).
+</li><li>
+Avoid excessive agency: give AI only the tools and rights the task needs, and let a person approve high-impact actions (citing OWASP Gen AI Security Project, 2025). Never leave decisions that seriously affect a person to AI alone (citing GDPR, Art. 22).
+</li></ul>
+<p><strong>3. My people (The translation)</strong></p>
+<ul><li>
+78% of AI users bring their own tools to work (citing Microsoft &amp; LinkedIn, 2024). Bans alone fail because employers can't watch everyone (citing Accountant.nl, 2025).
+</li><li>
+Offer one approved tool, a clear rule on what may go in, and block free chatbots. Staff AI training has been a legal duty since 2 Feb 2025 (citing EU AI Act Art. 4).
+</li></ul>
+<p><strong>Use case (CRISP-DM table)</strong></p>
+<ul><li>
+Business: the estimator loses mornings reading RFQs. The goal is less reading, with prices staying with the estimator.
+</li><li>
+Data, honestly assessed: past quotes are spread over Excel and ERP with inconsistent material names, some drawings are scans, and many fall under NDA.
+</li><li>
+Preparation: 50 past RFQs, with unneeded personal data removed and one fixed field list (material, dimensions, tolerances, quantity, delivery date).
+</li><li>
+Modelling: no custom model. A business-tier assistant fills the fields, and the existing costing sheet sets the price.
+</li><li>
+Evaluation: compare the AI's fields with the estimator's on the 50 RFQs, count errors per field (watch tolerances), and set the pass level first.
+</li><li>
+Deployment: draft for approval only. The estimator checks every draft, and 10 random drafts are rechecked each month.
+</li></ul>
+<p><strong>Tooling and responsible AI</strong></p>
+<ul><li>
+Tools in order of effort: a business-plan chat assistant (low), Microsoft 365 Copilot (low–medium; check file access first), Power Automate or Zapier with an AI step (medium), a local model (medium–high). (Recommended tooling)
+</li><li>
+Reliability: trust the tool only as far as the 50-RFQ test shows, since AI can confidently misread a tolerance. Every output is a draft. (Responsible AI &amp; trust)
+</li><li>
+GDPR: keep personal data out of prompts, list each AI tool in the processing register, and report leaks to the AP within 72 hours. (Responsible AI &amp; trust)
+</li><li>
+AI takes over the reading, not the judgement. Let staff say which AI they use without blame. (Responsible AI &amp; trust)
+</li><li>
+First five steps: ask the team which tools they use (no blame), choose one business-tier tool and sign its DPA, write a one-page AI rule, run a one-hour AI literacy session and keep a record of it, and test the quote use case on 50 past RFQs. (First five steps)
+</li></ul>
+<h2>Quotes</h2>
+<blockquote><p>AI takes over the reading, not the judgement</p></blockquote>
+<blockquote><p>Nothing leaves the building, but the models are weaker and need upkeep</p></blockquote>
+<blockquote><p>Bans alone fail, because employers can't watch everyone</p></blockquote>
+<h2>Caveats</h2>
+<ul><li>
+<strong>Student handbook draft (v0.2), not primary evidence.</strong> Every claim is relayed from a cited source that is not in this wiki. Vendor privacy pages (OpenAI, Microsoft, Anthropic, Mistral AI) are the evidence for the business-plan claims, so those claims are as the vendors describe their own products.
+</li><li>
+<strong>Fictional persona</strong> (stated as not a real firm).
+</li><li>
+<strong>Date.</strong> <code>date_published</code> is the last appraised date in the header (24 Sept 2026; the header reads ast appraised, a typo).
+</li><li>
+<strong>Reference mismatch.</strong> The OWASP reference is titled LLM06:2025 Excessive Agency, but its URL points to <code>llm06-sensitive-information-disclosure</code>.
+</li><li>
+The CBS (2025) reference is listed but not cited in the text.
+</li><li>
+<strong>Same course as the other handbook chapters</strong> (<a href="../sources/2026-10-05-aibs-handbook-themes-1-2.html">Theme 1 — What don&#x27;t we know yet about AI, and what should we find out first? / Theme 2 — What do firms like ours use AI for, and what pays off?</a>, <a href="../sources/2026-10-12-aibs-handbook-geopolitics.html">Who owns your AI – and what happens to you if that changes?</a>), so they are not independent of one another.
+</li><li>
+No protected material, and no text addressed to an AI.
+</li></ul>
+<h2>Links</h2>
+<ul><li>
+<span class="tag">ai-data-protection</span>
+</li><li>
+<span class="tag">human-oversight-of-ai</span>
+</li><li>
+<span class="tag">human-ai-handoff-costs</span>
+</li><li>
+<span class="tag">shadow-ai</span>
+</li><li>
+<span class="tag">ai-literacy-obligation</span>
+</li><li>
+<span class="tag">ai-assisted-quoting</span>
+</li><li>
+<span class="tag">ai-pilot-evaluation</span>
+</li><li>
+<span class="tag">ai-data-readiness</span>
+</li><li>
+<span class="tag">ai-vendor-dependency</span>
+</li></ul>
+<p>Cited but without pages: Accountant.nl / Autoriteit Persoonsgegevens (AP), OpenAI, Microsoft, Anthropic, Mistral AI, Microsoft &amp; LinkedIn Work Trend Index, OWASP Gen AI Security Project, SitePoint, GDPR (Art. 22, 30, 33, 35). The chapter uses CRISP-DM as its template.</p>
+<div class="pager"><a class="btn" href="2026-10-05-aibs-handbook-themes-1-2.html">← Theme 1 — What don&#x27;t we know yet about AI, and what should we find out first? / Theme 2 — What do firms like ours use AI for, and what pays off?</a><a class="btn" href="2026-07-28-solidworks-ai-fd03.html">SOLIDWORKS AI Just Got Better - Here&#x27;s What&#x27;s New in FD03 →</a></div>
+</main>
+</div>
+</body>
+</html>

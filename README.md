@@ -9,6 +9,11 @@ Made for the course [AI in Business](https://datadrivendecisions.github.io/ai-in
 (HAN, minor Data Driven Decision Making in Business). It follows the
 [LLM Wiki pattern](llm-wiki.md) described by Andrej Karpathy.
 
+## Browse the sources as a website
+
+Run `python3 tools/build_site.py`, then open `site/index.html` in a browser. The script builds
+a home page and one page per source in `wiki/sources/`. Run it again after each ingest.
+
 ## Why a wiki and not a chat with your files
 
 When you upload files to a chat, the assistant looks up passages when you ask, and forgets them
